@@ -6,10 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Firebase_version9_RealtimeDB(G'sACADEMY初学者用サンプル)</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
+ 
+    <link rel="stylesheet" href="/css/style.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
     <script type="module">
         // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js";
@@ -18,14 +19,22 @@
 
 
             
-
     
         // Your web app's Firebase configuration
         const firebaseConfig = {
+            apiKey: "AIzaSyD6OIJAgT9yYMEIMty6cMH6iSQCSINoEOs",
+    authDomain: "sample-d502f.firebaseapp.com",
+    databaseURL: "https://sample-d502f-default-rtdb.firebaseio.com",
+    projectId: "sample-d502f",
+    storageBucket: "sample-d502f.appspot.com",
+    messagingSenderId: "775354667711",
+    appId: "1:775354667711:web:84c4176095f0f0b9b9ac0a",
+    measurementId: "G-PJBJTGBY33"
         
         };
-
         
+
+
 
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
@@ -76,8 +85,21 @@
 
             // 画面に表示するために埋め込みます
             $('#output').append(html)
+
         })
 
+
+       
+     $('#clear').on('click',function(){
+     $('#output').empty();  
+      });
+
+
+</script>
+
+
+<script>
+    $(document).ready(function() {
         // 質問を表示する関数
         function showRandomQuestion() {
             const questions = [
@@ -106,22 +128,12 @@
                 showRandomQuestion();
             }
         });
-    </script>
-
-
-
-<script>
-$('#clear').on('click',function(){
-  $('#output').empty();
-
-})
-
-
+    });
 </script>
 
 
-
 </head>
+
 
 <body>
     <h1>はじめましてチャット</h1>
