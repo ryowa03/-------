@@ -14,7 +14,9 @@
     <script type="module">
         // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js";
-        import { getDatabase, ref, push, set, onChildAdded, remove, onChildRemoved }
+
+        //リアルタイムデーターベースのメソッド↓
+        import { getDatabase, ref, push, set, onChildAdded, remove, onChildGhanged, onChildRemoved }
             from "https://www.gstatic.com/firebasejs/9.1.0/firebase-database.js";
 
 
@@ -22,17 +24,10 @@
     
         // Your web app's Firebase configuration
         const firebaseConfig = {
-            apiKey: "AIzaSyD6OIJAgT9yYMEIMty6cMH6iSQCSINoEOs",
-    authDomain: "sample-d502f.firebaseapp.com",
-    databaseURL: "https://sample-d502f-default-rtdb.firebaseio.com",
-    projectId: "sample-d502f",
-    storageBucket: "sample-d502f.appspot.com",
-    messagingSenderId: "775354667711",
-    appId: "1:775354667711:web:84c4176095f0f0b9b9ac0a",
-    measurementId: "G-PJBJTGBY33"
+         
         
         };
-        
+
 
 
 
@@ -96,6 +91,8 @@
 
 
 </script>
+
+
 
 
 <script>
